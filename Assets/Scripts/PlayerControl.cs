@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
-
-    public float coinNum = 0;
-    public float moveSpeed = 2;
+    public float MaxSpeedMultply = 0.5F;
+    public float moveSpeed = 7;
     public float maxSpeed;
-    public float jumpForce = 10;
+    public float jumpForce = 500;
     public Transform groundCheck;
 
     private bool grounded = true;
@@ -26,7 +25,7 @@ public class PlayerControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        maxSpeed = moveSpeed * (coinNum+1);
+        maxSpeed = moveSpeed * (LevelManager.levelManager.keysAtual + 1) * MaxSpeedMultply;
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
     }
 
@@ -34,7 +33,7 @@ public class PlayerControl : MonoBehaviour {
     {
         if (estaVivo)
         {
-            rb.AddForce(Vector2.right * moveSpeed * (coinNum + 1));
+            rb.AddForce(Vector2.right * moveSpeed * (LevelManager.levelManager.keysAtual + 1));
 
             if (rb.velocity.x > maxSpeed)
             {
