@@ -1482,7 +1482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 878851515}
   - component: {fileID: 878851516}
-  - component: {fileID: 878851517}
   - component: {fileID: 878851518}
   m_Layer: 0
   m_Name: LimiteQueda
@@ -1531,18 +1530,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.057915, y: 0.5793768}
   m_EdgeRadius: 0
---- !u!114 &878851517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878851514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8b982bfada3964a850c89bdad8cbda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &878851518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2275,6 +2262,8 @@ MonoBehaviour:
   MaxSpeedMultply: 0.5
   moveSpeed: 7
   maxSpeed: 10
+  multiplicSpeedKeysNum: 0.2
+  speed: 5
   jumpForce: 400
   groundCheck: {fileID: 934086748}
 --- !u!61 &1599137343
