@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
+    public static PlayerControl playerControl;
     public float MaxSpeedMultply = 0.5F;
     private float speedBase = 10;
     public float moveSpeed = 7;
@@ -37,15 +38,11 @@ public class PlayerControl : MonoBehaviour {
             
             
             rb.AddForce(Vector2.right * moveSpeed);
-
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             if (rb.velocity.x > maxSpeed)
             {
                 rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x)* maxSpeed, rb.velocity.y);
-            }else
-            {
-                rb.velocity = new Vector2(moveSpeed , rb.velocity.y);
             }
-         
             if (grounded)
             {
                 if (Input.GetKey("space"))
@@ -54,7 +51,29 @@ public class PlayerControl : MonoBehaviour {
                     grounded = false;
                 }
             }
+           
+        }else
+        {
+            Morreu();
         }
+        
+    }
+    public void Morreu()
+    {
+        if (estaVivo)
+        {
+            estaVivo = false;
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+            Invoke("GameOver", 2f);
+        }
+    }
+
+    public void GameOver()
+    {
+        LevelManager.levelManager.GameOver();
     }
 }
 

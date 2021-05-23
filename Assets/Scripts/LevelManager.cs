@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
     public Text minutosText;
     public Text segundosText;
     public Text keysText;
+    public GameObject gameOverText;
     
     // Start is called before the first frame update
     void Awake()
@@ -46,7 +48,12 @@ public class LevelManager : MonoBehaviour
             }
             segundosToInt = (int)segundos;
             segundosText.text = segundosToInt.ToString();
-        } 
+        }
+
+        if (gameOver && Input.GetKey("space"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void SetKeys()
@@ -58,5 +65,11 @@ public class LevelManager : MonoBehaviour
     public int GetKeys()
     {
         return keysAtual;
+    }
+
+    public void  GameOver()
+    {
+        gameOver = true;
+        gameOverText.SetActive(true);
     }
 }
