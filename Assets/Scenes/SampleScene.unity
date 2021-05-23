@@ -580,7 +580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 103}
+  m_AnchoredPosition: {x: 23.6, y: 121.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358713144
@@ -1410,7 +1410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 67}
+  m_AnchoredPosition: {x: -168.3, y: 121.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &785626157
@@ -1482,7 +1482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 878851515}
   - component: {fileID: 878851516}
-  - component: {fileID: 878851517}
   - component: {fileID: 878851518}
   m_Layer: 0
   m_Name: LimiteQueda
@@ -1531,18 +1530,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.057915, y: 0.5793768}
   m_EdgeRadius: 0
---- !u!114 &878851517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878851514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8b982bfada3964a850c89bdad8cbda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &878851518
 MonoBehaviour:
   m_ObjectHideFlags: 0
