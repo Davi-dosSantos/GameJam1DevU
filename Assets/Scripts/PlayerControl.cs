@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
-    public float MaxSpeedMultply = 0.5F;
-    public float moveSpeed = 7;
-    public float maxSpeed;
+    public float multiplicSpeedKeysNum = 0.2F;
+    public float maxSpeed = 100;
+    public float speed = 5;
     public float jumpForce = 500;
     public Transform groundCheck;
+    private float keysSpeedAdd = (LevelManager.levelManager.keysAtual + 1) ;
 
     private bool grounded = true;
     private bool enemies = false;
@@ -25,7 +26,7 @@ public class PlayerControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        maxSpeed = moveSpeed * (LevelManager.levelManager.keysAtual + 1) * MaxSpeedMultply;
+        speed = speed * keysSpeedAdd * multiplicSpeedKeysNum;
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
     }
 
@@ -33,7 +34,7 @@ public class PlayerControl : MonoBehaviour {
     {
         if (estaVivo)
         {
-            rb.AddForce(Vector2.right * moveSpeed * (LevelManager.levelManager.keysAtual + 1));
+            rb.AddForce(Vector2.right * speed * keysSpeedAdd);
 
             if (rb.velocity.x > maxSpeed)
             {

@@ -3,16 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MainPlayer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Plataforms
+  - Ground
   - Water
   - UI
-  - Ground
-  - Enemies
+  - 
+  - 
   - 
   - 
   - 
