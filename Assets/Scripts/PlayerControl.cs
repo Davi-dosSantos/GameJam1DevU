@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour {
 
     public float coinNum = 0;
     public float moveSpeed = 2;
-    public float maxSpeed = 10;
+    public float maxSpeed;
     public float jumpForce = 10;
     public Transform groundCheck;
 
@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        maxSpeed = moveSpeed * (coinNum+1);
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
     }
 
@@ -35,6 +35,11 @@ public class PlayerControl : MonoBehaviour {
         if (estaVivo)
         {
             rb.AddForce(Vector2.right * moveSpeed * (coinNum + 1));
+
+            if (rb.velocity.x > maxSpeed)
+            {
+                rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x)* maxSpeed, rb.velocity.y);
+            }
 
             if (grounded)
             {
