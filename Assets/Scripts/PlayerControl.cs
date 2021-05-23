@@ -64,7 +64,7 @@ public class PlayerControl : MonoBehaviour {
         {
             estaVivo = false;
             rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<CapsuleCollider2D>().enabled = false;
             Invoke("GameOver", 2f);
