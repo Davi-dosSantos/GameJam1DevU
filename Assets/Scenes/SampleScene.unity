@@ -1483,7 +1483,11 @@ GameObject:
   - component: {fileID: 878851515}
   - component: {fileID: 878851516}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 878851518}
+=======
+  - component: {fileID: 878851517}
+>>>>>>> parent of a099dcd (v2 refatoring)
 =======
   - component: {fileID: 878851517}
 >>>>>>> parent of a099dcd (v2 refatoring)
@@ -1535,7 +1539,11 @@ BoxCollider2D:
   m_Size: {x: 33.057915, y: 0.5793768}
   m_EdgeRadius: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &878851518
+=======
+--- !u!114 &878851517
+>>>>>>> parent of a099dcd (v2 refatoring)
 =======
 --- !u!114 &878851517
 >>>>>>> parent of a099dcd (v2 refatoring)
@@ -1548,7 +1556,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 609166f888a2e1a46808b37f15a553ea, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 3f8b982bfada3964a850c89bdad8cbda, type: 3}
+>>>>>>> parent of a099dcd (v2 refatoring)
 =======
   m_Script: {fileID: 11500000, guid: 3f8b982bfada3964a850c89bdad8cbda, type: 3}
 >>>>>>> parent of a099dcd (v2 refatoring)
