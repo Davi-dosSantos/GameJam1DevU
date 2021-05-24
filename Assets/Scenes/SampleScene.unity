@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47459330}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: "Ch\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,11 +396,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7691665377425882306, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665378586527408, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660017, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_RootOrder
@@ -452,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660022, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
@@ -733,11 +733,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7691665377425882306, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665378586527408, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660017, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_RootOrder
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660022, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
@@ -1566,7 +1566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934086747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043, y: -0.55, z: 0}
+  m_LocalPosition: {x: -0.043, y: -0.293, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1599137347}
@@ -2240,6 +2240,7 @@ GameObject:
   - component: {fileID: 1599137344}
   - component: {fileID: 1599137343}
   - component: {fileID: 1599137342}
+  - component: {fileID: 1599137348}
   m_Layer: 0
   m_Name: Payer
   m_TagString: Player
@@ -2262,7 +2263,7 @@ MonoBehaviour:
   MaxSpeedMultply: 0.5
   moveSpeed: 7
   maxSpeed: 10
-  jumpForce: 400
+  jumpForce: 100
   groundCheck: {fileID: 934086748}
 --- !u!61 &1599137343
 BoxCollider2D:
@@ -2277,18 +2278,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006597709, y: 0.0114456415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.20122594, y: 0.49582046}
   m_EdgeRadius: 0
 --- !u!70 &1599137344
 CapsuleCollider2D:
@@ -2303,8 +2304,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 9.098748e-12, y: 0.005951169}
+  m_Size: {x: 0.2, y: 0.5}
   m_Direction: 0
 --- !u!50 &1599137345
 Rigidbody2D:
@@ -2367,7 +2368,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce318c1016d5b7a4080424518e51555c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2385,14 +2386,33 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599137341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3853226, y: -2.867651, z: 0}
-  m_LocalScale: {x: 0.6264, y: 1.1282, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.006099929, w: -0.99998146}
+  m_LocalPosition: {x: -3.99, y: -2.47, z: 0}
+  m_LocalScale: {x: 4.881822, y: 4.940625, z: 1}
   m_Children:
   - {fileID: 934086748}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.699}
+--- !u!95 &1599137348
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599137341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8756762f9556fc46b0f3c0e0b921c4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1648360977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2762,11 +2782,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7691665377425882306, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665378586527408, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660017, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_RootOrder
@@ -2818,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7691665379151660022, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dead5e6f72d20c40b9569363a01a5d1, type: 3}
