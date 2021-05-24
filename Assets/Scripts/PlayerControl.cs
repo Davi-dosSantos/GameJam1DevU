@@ -5,16 +5,15 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour {
 
     public static PlayerControl playerControl;
-    public float MaxSpeedMultply = 0.5F;
-    private float speedBase = 10;
-    public float moveSpeed = 7;
-    public float maxSpeed = 100;
+    public float moveSpeed;
     public float jumpForce = 500;
+    public float speedBase = 3;
     public Transform groundCheck;
 
-    private bool grounded = true;
 
     private Rigidbody2D rb;
+    private bool grounded = true;
+    private float maxSpeed = 50;
     private bool estaVivo = true;
 
     // Start is called before the first frame update
@@ -33,10 +32,9 @@ public class PlayerControl : MonoBehaviour {
     private void FixedUpdate()
     {
         if (estaVivo)
-        { 
-            moveSpeed = speedBase * (LevelManager.levelManager.keysAtual + 1) * MaxSpeedMultply;
-            
-            
+        {
+            //velocidade definida na base + pra cada 
+            moveSpeed = (speedBase +0.5F*(LevelManager.levelManager.keysAtual+1));
             rb.AddForce(Vector2.right * moveSpeed);
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             if (rb.velocity.x > maxSpeed)
