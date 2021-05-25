@@ -9,6 +9,9 @@ public class LevelManager : MonoBehaviour
     public static LevelManager levelManager;
     public int keysAtual = 0;
     private bool gameOver = false;
+    private bool winPhase = false;
+
+
 
     private float segundos;
     private int segundosToInt;
@@ -54,6 +57,10 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (winPhase)
+        {
+            
+        }
     }
 
     public void SetKeys()
@@ -71,5 +78,9 @@ public class LevelManager : MonoBehaviour
     {
         gameOver = true;
         gameOverText.SetActive(true);
+    }
+    public void WinPhase()
+    {
+        winPhase = true;
     }
 }

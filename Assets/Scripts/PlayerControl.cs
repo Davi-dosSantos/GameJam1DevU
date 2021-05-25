@@ -84,6 +84,11 @@ public class PlayerControl : MonoBehaviour {
     {
         LevelManager.levelManager.GameOver();
     }
+
+    public void WinPhase()
+    {
+        LevelManager.levelManager.WinPhase();
+    }
 }
 
 
