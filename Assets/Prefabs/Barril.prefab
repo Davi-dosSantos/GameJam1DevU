@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6878266160201853914}
   - component: {fileID: 6878266160201853915}
   - component: {fileID: 6878266160201853917}
+  - component: {fileID: -3176255952352906175}
   m_Layer: 6
   m_Name: Barril
   m_TagString: Untagged
@@ -109,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1761469, y: 0.15849443}
   m_EdgeRadius: 0
+--- !u!114 &-3176255952352906175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878266160201853912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71128ac984988714d9934510962b6f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plataformDestructionPoint: {fileID: 0}

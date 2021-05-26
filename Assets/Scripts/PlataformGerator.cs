@@ -7,18 +7,22 @@ public class PlataformGerator : MonoBehaviour
 
     public GameObject thePlatform;
     public Transform generationPoint;
-    private float distanceBtween;
-
     public float platformWidth;
-
     public float distanceBtweenMin;
     public float distanceBtweenMax;
+    public ObjectPooler[] theObjectPools;
+    public Transform maxHeightPoint;
+    public float maxHeightChange;
 
-    //public GameObject[] thePlatforms;
+
+    private float distanceBtween;
     private int platformSelector;
     private float[] platformWidths;
-        
-    public ObjectPooler[] theObjectPools;
+    private float minHeight;
+    private float maxHeight;
+    private float heightChange;
+    //public GameObject[] thePlatforms;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,9 @@ public class PlataformGerator : MonoBehaviour
             platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x; 
         }
 
+        minHeight = transform.position.y;
+        maxHeight = maxHeightPoint.position.y;
+
     }
 
     // Update is called once per frame
@@ -39,11 +46,23 @@ public class PlataformGerator : MonoBehaviour
         {
             distanceBtween = Random.Range(distanceBtweenMin, distanceBtweenMax);
 
-            platformSelector = Random.Range(0, theObjectPools.Length);
-            
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]/2) + distanceBtween, transform.position.y);
+            platformSelector = theObjectPools.Length;
+
+            heightChange = transform.position.y + Random.Range(maxHeightChange, - maxHeightChange);
+
            
+            if(heightChange > maxHeight)
+            {
+                heightChange = maxHeight;
+            }
+            else if (heightChange < minHeight)
+            {
+                heightChange = minHeight;
+            }
             
+            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]/2) + distanceBtween, heightChange);
+
+
             GameObject newPlataform = theObjectPools[platformSelector].GetPooledObject();
 
             newPlataform.transform.position = transform.position;
@@ -51,7 +70,6 @@ public class PlataformGerator : MonoBehaviour
             newPlataform.SetActive(true);
 
             transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
-
         }
     }
 }
