@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class PlataformGerator : MonoBehaviour
 {
-    public int minRangeY = -8;
-    public int maxRangeY = 8;
 
     public GameObject thePlataform;
     public Transform generationPoint;
-    public float distanceBtween = 25;
+    public float distanceBtween;
 
-    private float plataformWidth;
+    public float plataformWidth;
 
-    private float distanceBtweenMin;
-    private float distanceBtweenMax;
+    private float distanceBtweenMin = 6;
+    private float distanceBtweenMax = 10;
 
+    public ObjectPooler theObjectPool;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,12 @@ public class PlataformGerator : MonoBehaviour
         if (transform.position.x < generationPoint.position.x)
         {
             transform.position = new Vector2(transform.position.x + plataformWidth + distanceBtween, transform.position.y);
-            Instantiate(thePlataform, transform.position, transform.rotation);
+            //Instantiate(thePlataform, transform.position, transform.rotation);
+            GameObject newPlataform = theObjectPool.GetPooledObject();
+
+            newPlataform.transform.position = transform.position;
+            newPlataform.transform.rotation = transform.rotation;
+            newPlataform.SetActive(true);
                 }
     }
 }
