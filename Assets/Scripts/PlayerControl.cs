@@ -53,11 +53,19 @@ public class PlayerControl : MonoBehaviour {
             }
             if (grounded)
             {
-                if (Input.GetKey("space"))
+                if (Input.GetKey("space")|| Input.GetKey("up"))
                 {
                     animator.SetBool("Jump", true);
                     rb.AddForce(new Vector2(0, jumpForce));
                     grounded = false;
+                }
+                
+            }
+            if (!grounded)
+            {
+                if (Input.GetKey("down") || Input.GetKey("crtl"))
+                {
+                    rb.AddForce(new Vector2(0, -jumpForce));
                 }
             }
            
