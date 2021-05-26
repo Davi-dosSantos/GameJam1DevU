@@ -63,7 +63,7 @@ public class PlayerControl : MonoBehaviour {
             }
             if (!grounded)
             {
-                if (Input.GetKey("down") || Input.GetKey("crtl"))
+                if (Input.GetKey("down") || Input.GetKey(KeyCode.LeftAlt))
                 {
                     rb.AddForce(new Vector2(0, -jumpForce));
                 }
