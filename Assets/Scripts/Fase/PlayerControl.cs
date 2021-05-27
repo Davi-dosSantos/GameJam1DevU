@@ -84,8 +84,7 @@ public class PlayerControl : MonoBehaviour {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
             GetComponent<BoxCollider2D>().enabled = false;
-            SceneManager.LoadScene("MorteMenu");
-            //Invoke("GameOver", 2f);
+            Invoke("GameOver", 2f);
         }
     }
 

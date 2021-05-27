@@ -15,9 +15,9 @@ public class LevelManager : MonoBehaviour
 
     private float segundos;
     private int segundosToInt;
-    private int minutos;
+    
 
-    public Text minutosText;
+    public Text maxKeysText;
     public Text segundosText;
     public Text keysText;
     public GameObject gameStartPause;
@@ -25,6 +25,13 @@ public class LevelManager : MonoBehaviour
     public GameObject gameWinText;
 
     // Start is called before the first frame update
+
+    void Start()
+    {
+        maxKeysText.text = PlataformGerator.plataformGerator.NumKeysWin.ToString();
+    }
+
+
     void Awake()
     {
         if(levelManager == null)

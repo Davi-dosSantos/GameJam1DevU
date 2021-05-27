@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keysAtual: 0
-  minutosText: {fileID: 0}
+  maxKeysText: {fileID: 1426972475}
   segundosText: {fileID: 343312572}
   keysText: {fileID: 1142031185}
   gameStartPause: {fileID: 0}
@@ -3754,8 +3754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.8991, y: -18.3915}
-  m_SizeDelta: {x: 996.5228, y: 477.8427}
+  m_AnchoredPosition: {x: 8.8261, y: 2.0977}
+  m_SizeDelta: {x: 1939.0306, y: 1233.0199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072256028
 MonoBehaviour:
