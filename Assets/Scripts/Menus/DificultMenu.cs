@@ -7,8 +7,8 @@ public class DificultMenu : MonoBehaviour
 
     public void Facil()
     {
-        LevelManager.levelManager.SetKeysMaxAndBaseSpeed(10, 5);
         SceneManager.LoadScene("fase1");
+        LevelManager.levelManager.SetKeysMaxAndBaseSpeed(10, 5);
     }
     public void Medio()
     {

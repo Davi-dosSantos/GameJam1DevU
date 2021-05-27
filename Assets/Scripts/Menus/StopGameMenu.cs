@@ -10,7 +10,7 @@ public class StopGameMenu : MonoBehaviour
         LevelManager.levelManager.gamePause = false;
         LevelManager.levelManager.gamePauseText.SetActive(false);
         Time.timeScale = 1f;
-        
+
     }
 
     public void Reiniciar()
@@ -22,4 +22,4 @@ public class StopGameMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 }
-
+    
