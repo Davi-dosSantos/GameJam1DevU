@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
 
     public string iniciar;
     public void PlayGame()
     {
-        SceneManager.LoadScene(iniciar);
+        SceneManager.LoadScene("DificuldadeMenu");
     }
     public void Creditos()
     {
-        SceneManager.LoadScene("creditos");
+        SceneManager.LoadScene("Creditos");
     }
 
-    // Update is called once per frame
     public void Quit()
     {
         Application.Quit();
