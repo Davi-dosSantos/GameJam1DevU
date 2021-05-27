@@ -6,21 +6,18 @@ public class PlataformGerator : MonoBehaviour
 {
 
     public GameObject thePlatform;
+
     public Transform generationPoint;
     public float platformWidth;
     public float distanceBtweenMin;
     public float distanceBtweenMax;
     public ObjectPooler[] theObjectPools;
-    public Transform maxHeightPoint;
-    public float maxHeightChange;
 
 
     private float distanceBtween;
     private int platformSelector;
     private float[] platformWidths;
-    private float minHeight;
-    private float maxHeight;
-    private float heightChange;
+
     //public GameObject[] thePlatforms;
 
 
@@ -31,45 +28,37 @@ public class PlataformGerator : MonoBehaviour
 
         for (int i = 0; i < theObjectPools.Length; i++)
         {
-            platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x; 
+            platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
         }
-
-        minHeight = transform.position.y;
-        maxHeight = maxHeightPoint.position.y;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < generationPoint.position.x)
-        {
+            if (transform.position.x < generationPoint.position.x)
+            {
             distanceBtween = Random.Range(distanceBtweenMin, distanceBtweenMax);
-
-            platformSelector = theObjectPools.Length;
-
-            heightChange = transform.position.y + Random.Range(maxHeightChange, - maxHeightChange);
-
-           
-            if(heightChange > maxHeight)
+                
+            if (LevelManager.levelManager.keysAtual < 5)
             {
-                heightChange = maxHeight;
-            }
-            else if (heightChange < minHeight)
+                platformSelector = Random.Range(0, theObjectPools.Length - 1);
+            }else 
             {
-                heightChange = minHeight;
+                platformSelector = (theObjectPools.Length-1);
             }
-            
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]/2) + distanceBtween, heightChange);
+            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 3) + distanceBtween, transform.position.y);
 
+                GameObject newPlataform = theObjectPools[platformSelector].GetPooledObject();
 
-            GameObject newPlataform = theObjectPools[platformSelector].GetPooledObject();
+                newPlataform.transform.position = transform.position;
+                newPlataform.transform.rotation = transform.rotation;
+                newPlataform.SetActive(true);
 
-            newPlataform.transform.position = transform.position;
-            newPlataform.transform.rotation = transform.rotation;
-            newPlataform.SetActive(true);
+                transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
 
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
+            }
         }
+        
     }
-}
+
