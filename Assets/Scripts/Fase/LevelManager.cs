@@ -46,11 +46,11 @@ public class LevelManager : MonoBehaviour
             segundosToInt = (int)segundos;
             segundosText.text = segundosToInt.ToString();
         }
-
+        /*
         if (gameOver && Input.GetKey("space"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }*/
         if (gameWin)
         {
             
@@ -77,6 +77,12 @@ public class LevelManager : MonoBehaviour
     {
         gameWin= true;
         gameWinText.SetActive(true);
+    }
+    public void SetKeysMaxAndBaseSpeed(int Keys,int speedBase )
+    {
+
+        PlataformGerator.plataformGerator.NumKeysWin = Keys;
+        PlayerControl.playerControl.speedBase = speedBase;
     }
 
 }

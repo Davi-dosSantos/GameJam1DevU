@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: b78f70bc2bd4fa644abc03884572f926
+  - enabled: 1
+    path: Assets/Scenes/MorteMenu.unity
+    guid: 1483505c0bfecda478cba4aa7d5cbce3
+  - enabled: 1
+    path: Assets/Scenes/MenuPauseGame.unity
+    guid: efb7ab7b7b0998b4c8f54b470292510a
   m_configObjects: {}

@@ -7,6 +7,7 @@ public class PlataformGerator : MonoBehaviour
 
     public GameObject thePlatform;
 
+    public static PlataformGerator plataformGerator;
     public Transform generationPoint;
     public float platformWidth;
     public float distanceBtweenMin;

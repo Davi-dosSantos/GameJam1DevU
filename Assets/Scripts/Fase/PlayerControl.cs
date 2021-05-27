@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour {
 
@@ -83,7 +84,8 @@ public class PlayerControl : MonoBehaviour {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
             GetComponent<BoxCollider2D>().enabled = false;
-            Invoke("GameOver", 2f);
+            SceneManager.LoadScene("MorteMenu");
+            //Invoke("GameOver", 2f);
         }
     }
 

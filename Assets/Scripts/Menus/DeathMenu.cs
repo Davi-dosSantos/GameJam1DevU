@@ -4,15 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DeathMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Reiniciar()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Menu()
     {
-        
+        SceneManager.LoadScene("MainMenu");
     }
 }
