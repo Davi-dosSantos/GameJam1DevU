@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager levelManager;
     public int keysAtual = 0;
     private bool gameOver = false;
-    private bool winPhase = false;
+    private bool gameWin = false;
 
 
 
@@ -20,8 +20,10 @@ public class LevelManager : MonoBehaviour
     public Text minutosText;
     public Text segundosText;
     public Text keysText;
+    public GameObject gameStartPause;
     public GameObject gameOverText;
-    
+    public GameObject gameWinText;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,14 +43,6 @@ public class LevelManager : MonoBehaviour
         if (!gameOver)
         {
             segundos += Time.deltaTime;
-
-            if(segundos >= 60)
-            {
-                segundos = 0;
-                minutos++;
-                minutosText.text = minutos.ToString();
-
-            }
             segundosToInt = (int)segundos;
             segundosText.text = segundosToInt.ToString();
         }
@@ -57,7 +51,7 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (winPhase)
+        if (gameWin)
         {
             
         }
@@ -74,10 +68,15 @@ public class LevelManager : MonoBehaviour
         return keysAtual;
     }
 
-    public void  GameOver()
+    public void GameOver()
     {
         gameOver = true;
         gameOverText.SetActive(true);
     }
-    
+    public void GameWin()
+    {
+        gameWin= true;
+        gameWinText.SetActive(true);
+    }
+
 }

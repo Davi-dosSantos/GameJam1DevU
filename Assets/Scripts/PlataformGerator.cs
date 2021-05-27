@@ -12,13 +12,14 @@ public class PlataformGerator : MonoBehaviour
     public float distanceBtweenMin;
     public float distanceBtweenMax;
     public ObjectPooler[] theObjectPools;
-
+    public int NumKeysWin;
 
     private float distanceBtween;
     private int platformSelector;
     private float[] platformWidths;
 
     private KeysGenerator theKeysGenerator;
+    private EnemyGenerator theEnemyGenerator;
 
     //public GameObject[] thePlatforms;
 
@@ -34,6 +35,7 @@ public class PlataformGerator : MonoBehaviour
         }
 
         theKeysGenerator = FindObjectOfType<KeysGenerator>();
+        theEnemyGenerator = FindObjectOfType<EnemyGenerator>();
 
     }
 
@@ -44,7 +46,7 @@ public class PlataformGerator : MonoBehaviour
             {
             distanceBtween = Random.Range(distanceBtweenMin, distanceBtweenMax);
                 
-            if (LevelManager.levelManager.keysAtual < 5)
+            if (LevelManager.levelManager.keysAtual < NumKeysWin)
             {
                 platformSelector = Random.Range(0, theObjectPools.Length - 1);
             }else 
@@ -62,7 +64,11 @@ public class PlataformGerator : MonoBehaviour
             {
                 theKeysGenerator.SpawnKeys(new Vector3(transform.position.x, transform.position.y + Random.Range(1, 5)));
             }
-                transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
+            if (Random.Range(0, 6) == 1)
+            {
+                theEnemyGenerator.SpawnEnemy(new Vector3(transform.position.x, transform.position.y + 1F));
+            }
+            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
 
             }
         }

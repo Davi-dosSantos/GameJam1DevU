@@ -6,13 +6,13 @@ public class PlayerControl : MonoBehaviour {
 
     public static PlayerControl playerControl;
     public float moveSpeed;
-    public float jumpForce = 500;
-    public float speedBase = 3;
+    public float jumpForce;
+    public float speedBase;
     public Transform groundCheck;
    
     private Rigidbody2D rb;
     private bool grounded = true;
-    private float maxSpeed = 50;
+    private float maxSpeed = 150;
     private bool estaVivo = true;
 
     private Animator animator;
@@ -91,8 +91,12 @@ public class PlayerControl : MonoBehaviour {
     {
         LevelManager.levelManager.GameOver();
     }
+    public void GameWin()
+    {
+        LevelManager.levelManager.GameWin();
+    }
 
-    
+
 }
 
 
