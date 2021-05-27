@@ -18,6 +18,8 @@ public class PlataformGerator : MonoBehaviour
     private int platformSelector;
     private float[] platformWidths;
 
+    private KeysGenerator theKeysGenerator;
+
     //public GameObject[] thePlatforms;
 
 
@@ -30,6 +32,8 @@ public class PlataformGerator : MonoBehaviour
         {
             platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
         }
+
+        theKeysGenerator = FindObjectOfType<KeysGenerator>();
 
     }
 
@@ -54,7 +58,10 @@ public class PlataformGerator : MonoBehaviour
                 newPlataform.transform.position = transform.position;
                 newPlataform.transform.rotation = transform.rotation;
                 newPlataform.SetActive(true);
-
+            if (Random.Range(0, 3) == 1)
+            {
+                theKeysGenerator.SpawnKeys(new Vector3(transform.position.x, transform.position.y + Random.Range(1, 5)));
+            }
                 transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBtween, transform.position.y);
 
             }

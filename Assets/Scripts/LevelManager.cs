@@ -79,8 +79,5 @@ public class LevelManager : MonoBehaviour
         gameOver = true;
         gameOverText.SetActive(true);
     }
-    public void WinPhase()
-    {
-        winPhase = true;
-    }
+    
 }
