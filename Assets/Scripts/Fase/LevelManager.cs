@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public int keysAtual = 0;
     private bool gameOver = false;
     private bool gameWin = false;
+    public bool gamePause = false;
 
 
 
@@ -20,7 +21,7 @@ public class LevelManager : MonoBehaviour
     public Text maxKeysText;
     public Text segundosText;
     public Text keysText;
-    public GameObject gameStartPause;
+    public GameObject gamePauseText;
     public GameObject gameOverText;
     public GameObject gameWinText;
 
@@ -53,11 +54,12 @@ public class LevelManager : MonoBehaviour
             segundosToInt = (int)segundos;
             segundosText.text = segundosToInt.ToString();
         }
-        /*
-        if (gameOver && Input.GetKey("space"))
+        
+        if (!gameOver && !gamePause && Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }*/
+            GameStop();
+
+        }
         if (gameWin)
         {
             
@@ -84,6 +86,12 @@ public class LevelManager : MonoBehaviour
     {
         gameWin= true;
         gameWinText.SetActive(true);
+    }
+    public void GameStop()
+    {
+        Time.timeScale = 0f;
+        gamePause = true;
+        gamePauseText.SetActive(true);
     }
     public void SetKeysMaxAndBaseSpeed(int Keys,int speedBase )
     {

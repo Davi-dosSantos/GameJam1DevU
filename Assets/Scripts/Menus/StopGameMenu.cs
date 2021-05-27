@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class StopGameMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void ContinueGame()
     {
+        LevelManager.levelManager.gamePause = false;
+        LevelManager.levelManager.gamePauseText.SetActive(false);
+        Time.timeScale = 1f;
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Reiniciar()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
+
