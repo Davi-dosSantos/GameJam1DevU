@@ -9,6 +9,7 @@ public class Canhão : MonoBehaviour
     public GameObject bullet;
     float timebetween;
     public float starttimebetween;
+    public AudioSource bulletSound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class Canhão : MonoBehaviour
         {
             Instantiate(bullet, firepoint.position, firepoint.rotation);
             timebetween = starttimebetween;
+            bulletSound.Play();
+
         }
         else
         {

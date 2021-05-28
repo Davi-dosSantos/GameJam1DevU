@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
 
 
 
+    public AudioSource KeySound;
+
     private float segundos;
     private int segundosToInt;
     
@@ -68,6 +70,7 @@ public class LevelManager : MonoBehaviour
 
     public void SetKeys()
     {
+        KeySound.Play();
         keysAtual++;
         keysText.text = keysAtual.ToString();
     }
@@ -93,11 +96,5 @@ public class LevelManager : MonoBehaviour
         gamePause = true;
         gamePauseText.SetActive(true);
     }
-    public void SetKeysMaxAndBaseSpeed(int Keys,int speedBase )
-    {
-
-        PlataformGerator.plataformGerator.NumKeysWin = Keys;
-        PlayerControl.playerControl.speedBase = speedBase;
-    }
-
+    
 }

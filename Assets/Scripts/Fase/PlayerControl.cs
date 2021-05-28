@@ -10,7 +10,12 @@ public class PlayerControl : MonoBehaviour {
     public float jumpForce;
     public float speedBase;
     public Transform groundCheck;
-   
+
+    public AudioSource jumpSound;
+    public AudioSource deathSound;
+    public AudioSource chestSound;
+
+
     private Rigidbody2D rb;
     private bool grounded = true;
     private float maxSpeed = 150;
@@ -56,6 +61,7 @@ public class PlayerControl : MonoBehaviour {
             {
                 if (Input.GetKey("space")|| Input.GetKey("up"))
                 {
+                    jumpSound.Play();
                     animator.SetBool("Jump", true);
                     rb.AddForce(new Vector2(0, jumpForce));
                     grounded = false;
@@ -80,11 +86,13 @@ public class PlayerControl : MonoBehaviour {
     {
         if (estaVivo)
         {
+            deathSound.Play();
             estaVivo = false;
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
             GetComponent<BoxCollider2D>().enabled = false;
             Invoke("GameOver", 2f);
+            
         }
     }
 
@@ -96,6 +104,12 @@ public class PlayerControl : MonoBehaviour {
     {
         LevelManager.levelManager.GameWin();
     }
+    public void SetKeysBaseSpeed(int speedB = 5)
+    {
+
+        speedBase = speedB;
+    }
+
 
 
 }

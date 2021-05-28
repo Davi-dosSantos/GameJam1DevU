@@ -7,18 +7,21 @@ public class DificultMenu : MonoBehaviour
 
     public void Facil()
     {
-        SceneManager.LoadScene("fase1");
-        LevelManager.levelManager.SetKeysMaxAndBaseSpeed(10, 5);
+        PlayerControl.playerControl.SetKeysBaseSpeed(5);
+        PlataformGerator.plataformGerator.SetMaxKeys(10);
+        SceneManager.LoadScene("fase1-facil");
     }
     public void Medio()
     {
-        LevelManager.levelManager.SetKeysMaxAndBaseSpeed(20, 7);
+        PlayerControl.playerControl.SetKeysBaseSpeed(7);
+        PlataformGerator.plataformGerator.SetMaxKeys(20);
         SceneManager.LoadScene("fase1");
     }
     public void Dificil()
     {
-        LevelManager.levelManager.SetKeysMaxAndBaseSpeed(50, 10);
-        SceneManager.LoadScene("fase1");
+        PlayerControl.playerControl.SetKeysBaseSpeed(10);
+        PlataformGerator.plataformGerator.SetMaxKeys(50);
+        SceneManager.LoadScene("fase1-dificl");
     }
     public void Voltar()
     {
