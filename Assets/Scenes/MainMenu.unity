@@ -209,7 +209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Em busca do One Piece
+  m_Text: Em busca do bau perdido
 --- !u!222 &178614106
 CanvasRenderer:
   m_ObjectHideFlags: 0
