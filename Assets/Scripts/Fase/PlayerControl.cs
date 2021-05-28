@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -104,14 +105,7 @@ public class PlayerControl : MonoBehaviour {
     {
         LevelManager.levelManager.GameWin();
     }
-    public void SetKeysBaseSpeed(int speedB = 5)
-    {
-
-        speedBase = speedB;
-    }
-
-
-
+    
 }
 
 

@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     private bool gameOver = false;
     private bool gameWin = false;
     public bool gamePause = false;
+    public bool gameSet = false;
 
 
 
@@ -26,11 +27,15 @@ public class LevelManager : MonoBehaviour
     public GameObject gamePauseText;
     public GameObject gameOverText;
     public GameObject gameWinText;
+    public GameObject gameDificultText;
+
 
     // Start is called before the first frame update
 
     void Start()
     {
+        
+        gameDificultText.SetActive(true);
         maxKeysText.text = PlataformGerator.plataformGerator.NumKeysWin.ToString();
     }
 
@@ -50,6 +55,11 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameSet)
+        {
+            GameSet();
+        }
+
         if (!gameOver)
         {
             segundos += Time.deltaTime;
@@ -96,5 +106,11 @@ public class LevelManager : MonoBehaviour
         gamePause = true;
         gamePauseText.SetActive(true);
     }
-    
+    public void GameSet()
+    {
+        Time.timeScale = 0f;
+        gameSet = true;
+        gameDificultText.SetActive(true);
+    }
+
 }

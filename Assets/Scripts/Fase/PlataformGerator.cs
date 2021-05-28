@@ -74,12 +74,5 @@ public class PlataformGerator : MonoBehaviour
             }
         }
 
-    public void SetMaxKeys(int KeysWin = 5)
-    {
-
-        NumKeysWin = KeysWin;
-    }
-    
-
 }
 

@@ -4,24 +4,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DificultMenu : MonoBehaviour
 {
-
+    
     public void Facil()
     {
-        PlayerControl.playerControl.SetKeysBaseSpeed(5);
-        PlataformGerator.plataformGerator.SetMaxKeys(10);
-        SceneManager.LoadScene("fase1-facil");
+        PlataformGerator.plataformGerator.NumKeysWin = 10;
+        PlayerControl.playerControl.speedBase = 5;
+        LevelManager.levelManager.gameDificultText.SetActive(false);
+        Time.timeScale = 1f;
+         
+        
     }
     public void Medio()
     {
-        PlayerControl.playerControl.SetKeysBaseSpeed(7);
-        PlataformGerator.plataformGerator.SetMaxKeys(20);
-        SceneManager.LoadScene("fase1");
+        PlataformGerator.plataformGerator.NumKeysWin = 20;
+        PlayerControl.playerControl.speedBase = 7;
+        LevelManager.levelManager.gameDificultText.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void Dificil()
     {
-        PlayerControl.playerControl.SetKeysBaseSpeed(10);
-        PlataformGerator.plataformGerator.SetMaxKeys(50);
-        SceneManager.LoadScene("fase1-dificl");
+        PlataformGerator.plataformGerator.NumKeysWin = 50;
+        PlayerControl.playerControl.speedBase = 10;
+        LevelManager.levelManager.gameDificultText.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void Voltar()
     {

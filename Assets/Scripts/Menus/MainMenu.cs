@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public string iniciar;
     public void PlayGame()
     {
-        SceneManager.LoadScene("DificuldadeMenu");
+        SceneManager.LoadScene("Introducao");
     }
     public void Creditos()
     {
