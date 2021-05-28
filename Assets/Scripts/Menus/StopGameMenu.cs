@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class StopGameMenu : MonoBehaviour
 {
+   
     public void ContinueGame()
     {
-        LevelManager.levelManager.gamePause = false;
-        LevelManager.levelManager.gamePauseText.SetActive(false);
-        Time.timeScale = 1f;
+        LevelManager.levelManager.GameContinue();
 
     }
 

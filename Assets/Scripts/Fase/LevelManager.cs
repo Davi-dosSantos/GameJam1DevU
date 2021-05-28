@@ -8,15 +8,13 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager levelManager;
     public int keysAtual = 0;
+    public int NumKeysWin;
+    public bool gamePause = false;
+    public AudioSource KeySound;
+    public AudioSource GameWinSound;
+
     private bool gameOver = false;
     private bool gameWin = false;
-    public bool gamePause = false;
-    public bool gameSet = false;
-
-
-
-    public AudioSource KeySound;
-
     private float segundos;
     private int segundosToInt;
     
@@ -27,16 +25,14 @@ public class LevelManager : MonoBehaviour
     public GameObject gamePauseText;
     public GameObject gameOverText;
     public GameObject gameWinText;
-    public GameObject gameDificultText;
+   
 
 
     // Start is called before the first frame update
 
     void Start()
-    {
-        
-        gameDificultText.SetActive(true);
-        maxKeysText.text = PlataformGerator.plataformGerator.NumKeysWin.ToString();
+    { 
+        maxKeysText.text = NumKeysWin.ToString();
     }
 
 
@@ -55,11 +51,6 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameSet)
-        {
-            GameSet();
-        }
-
         if (!gameOver)
         {
             segundos += Time.deltaTime;
@@ -67,14 +58,20 @@ public class LevelManager : MonoBehaviour
             segundosText.text = segundosToInt.ToString();
         }
         
+
         if (!gameOver && !gamePause && Input.GetKey(KeyCode.Escape))
         {
             GameStop();
 
         }
+        if (!gameOver && gamePause && Input.GetKey(KeyCode.Escape))
+        {
+            GameContinue();
+
+        }
         if (gameWin)
         {
-            
+            GameWin();
         }
     }
 
@@ -94,6 +91,7 @@ public class LevelManager : MonoBehaviour
     {
         gameOver = true;
         gameOverText.SetActive(true);
+        Time.timeScale = 1f;
     }
     public void GameWin()
     {
@@ -106,11 +104,11 @@ public class LevelManager : MonoBehaviour
         gamePause = true;
         gamePauseText.SetActive(true);
     }
-    public void GameSet()
+    public void GameContinue()
     {
-        Time.timeScale = 0f;
-        gameSet = true;
-        gameDificultText.SetActive(true);
+        Time.timeScale = 1f;
+        gamePause = false;
+        gamePauseText.SetActive(false);
     }
 
 }

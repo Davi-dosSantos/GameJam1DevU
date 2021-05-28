@@ -7,30 +7,18 @@ public class DificultMenu : MonoBehaviour
     
     public void Facil()
     {
-        PlataformGerator.plataformGerator.NumKeysWin = 10;
-        PlayerControl.playerControl.speedBase = 5;
-        LevelManager.levelManager.gameDificultText.SetActive(false);
-        Time.timeScale = 1f;
-         
-        
+        SceneManager.LoadScene("Fase1-Facil");
     }
     public void Medio()
     {
-
-        PlataformGerator.plataformGerator.NumKeysWin = 20;
-        PlayerControl.playerControl.speedBase = 7;
-        LevelManager.levelManager.gameDificultText.SetActive(false);
-        Time.timeScale = 1f;
+        SceneManager.LoadScene("Fase1-Medio");
     }
     public void Dificil()
     {
-        PlataformGerator.plataformGerator.NumKeysWin = 50;
-        PlayerControl.playerControl.speedBase = 10;
-        LevelManager.levelManager.gameDificultText.SetActive(false);
-        Time.timeScale = 1f;
+        SceneManager.LoadScene("Fase1-Dificil");
     }
     public void Voltar()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Comandos");
     }
 }

@@ -58,8 +58,9 @@ public class PlayerControl : MonoBehaviour {
             {
                 rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x)* maxSpeed, rb.velocity.y);
             }
-            if (grounded)
-            {
+            
+            if (grounded) { 
+            
                 if (Input.GetKey("space")|| Input.GetKey("up"))
                 {
                     jumpSound.Play();
@@ -105,7 +106,10 @@ public class PlayerControl : MonoBehaviour {
     {
         LevelManager.levelManager.GameWin();
     }
-    
+    public void GameContinue()
+    {
+        LevelManager.levelManager.GameContinue();
+    }
 }
 
 

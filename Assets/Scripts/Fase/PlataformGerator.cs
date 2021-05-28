@@ -13,7 +13,7 @@ public class PlataformGerator : MonoBehaviour
     public float distanceBtweenMin;
     public float distanceBtweenMax;
     public ObjectPooler[] theObjectPools;
-    public int NumKeysWin;
+    private int NumKeysWin;
 
     private float distanceBtween;
     private int platformSelector;
@@ -28,6 +28,7 @@ public class PlataformGerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NumKeysWin = LevelManager.levelManager.NumKeysWin;
         platformWidths = new float[theObjectPools.Length];
 
         for (int i = 0; i < theObjectPools.Length; i++)
