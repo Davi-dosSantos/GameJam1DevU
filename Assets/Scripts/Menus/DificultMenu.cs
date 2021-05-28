@@ -16,6 +16,7 @@ public class DificultMenu : MonoBehaviour
     }
     public void Medio()
     {
+
         PlataformGerator.plataformGerator.NumKeysWin = 20;
         PlayerControl.playerControl.speedBase = 7;
         LevelManager.levelManager.gameDificultText.SetActive(false);
