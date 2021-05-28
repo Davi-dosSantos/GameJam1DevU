@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Vitor Ramos \n\n\nAndre Raicoski \n\n\nDavi dos Santos \n"
+  m_Text: "Vitor Ramos \n\n\nAndre Raicoski \n\n\nDavi dos Santos  /  Lucas Batista\n"
 --- !u!222 &2132705587
 CanvasRenderer:
   m_ObjectHideFlags: 0
