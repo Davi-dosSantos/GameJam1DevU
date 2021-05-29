@@ -384,12 +384,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\t\n \tJohan nao desistira de seu objetivo facilmente, \ne com o passar
-    do tempo sua obsecao minara sua \nsanidade e o tornara cada vez mais cego por
-    sua \ncobica, ate que nao lhe restara nada, neste dia \nseus olhos se abriram
-    e ele percebera que viveu\ntoda sua vida em vao, percebera que nao aproveitou
-    \na sua jornada pois estava cego pela sua ambisao\ne dara seu ultimo suspiro
-    em solidao atormentado \npor seus fantasmas e um sonho que nunca se realizara"
+  m_Text: "\t\n \tJohan nao desistira de seu objetivo facilmente\r\ne, com o passar
+    do tempo, sua obsessao minara sua \r\nsanidade e o tornara cada vez mais cego
+    por sua \r\ncobica, ate que nao lhe restara nada. Neste dia, \r\nseus olhos se
+    abrirao e ele percebera que viveu\r\ntoda sua vida em vao, percebera que nao
+    aproveitou \r\na sua jornada pois estava cego pela sua ambisao\r\ne dara seu
+    ultimo suspiro em solidao, atormentado \r\npor seus fantasmas e um sonho que
+    nunca se realizara."
 --- !u!222 &410260913
 CanvasRenderer:
   m_ObjectHideFlags: 0

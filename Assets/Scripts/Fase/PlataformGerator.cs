@@ -9,15 +9,14 @@ public class PlataformGerator : MonoBehaviour
 
     public static PlataformGerator plataformGerator;
     public Transform generationPoint;
-    public float platformWidth;
-    public float distanceBtweenMin;
-    public float distanceBtweenMax;
     public ObjectPooler[] theObjectPools;
-    private int NumKeysWin;
+    public float distanceBtween;
+    
 
-    private float distanceBtween;
+
+    private int NumKeysWin;
     private int platformSelector;
-    private float[] platformWidths;
+    public float[] platformWidths;
 
     private KeysGenerator theKeysGenerator;
     private EnemyGenerator theEnemyGenerator;
@@ -26,7 +25,7 @@ public class PlataformGerator : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         NumKeysWin = LevelManager.levelManager.NumKeysWin;
         platformWidths = new float[theObjectPools.Length];
@@ -42,12 +41,10 @@ public class PlataformGerator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
             if (transform.position.x < generationPoint.position.x)
-            {
-            distanceBtween = Random.Range(distanceBtweenMin, distanceBtweenMax);
-                
+            {   
             if (LevelManager.levelManager.keysAtual < NumKeysWin)
             {
                 platformSelector = Random.Range(0, theObjectPools.Length - 1);
@@ -66,7 +63,7 @@ public class PlataformGerator : MonoBehaviour
             {
                 theKeysGenerator.SpawnKeys(new Vector3(transform.position.x, transform.position.y + Random.Range(1, 5)));
             }
-            if (Random.Range(0, 6) == 1)
+            if (platformSelector != 4 && Random.Range(0, 5) == 1)
             {
                 theEnemyGenerator.SpawnEnemy(new Vector3(transform.position.x, transform.position.y + 1F));
             }

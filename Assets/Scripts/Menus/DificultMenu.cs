@@ -7,15 +7,15 @@ public class DificultMenu : MonoBehaviour
     
     public void Facil()
     {
-        SceneManager.LoadScene("Fase1-Facil");
+        SceneManager.LoadScene("Introducao");
     }
     public void Medio()
     {
-        SceneManager.LoadScene("Fase1-Medio");
+        SceneManager.LoadScene("Itroducao2");
     }
     public void Dificil()
     {
-        SceneManager.LoadScene("Fase1-Dificil");
+        SceneManager.LoadScene("Itroducao3");
     }
     public void Voltar()
     {

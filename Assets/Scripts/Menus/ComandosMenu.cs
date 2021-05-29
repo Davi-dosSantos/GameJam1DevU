@@ -7,11 +7,11 @@ public class ComandosMenu : MonoBehaviour
 {
     public void Continue()
     {
-        SceneManager.LoadScene("fase1");
+        SceneManager.LoadScene("DificulteSelector");
     }
     public void Voltar()
     {
-        SceneManager.LoadScene("Introducao");
+        SceneManager.LoadScene("MainMenu");
     }
     
 

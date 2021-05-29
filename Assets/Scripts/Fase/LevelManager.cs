@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager levelManager;
     public int keysAtual = 0;
     public int NumKeysWin;
+    public int speedBase;
+    
     public bool gamePause = false;
     public AudioSource KeySound;
     public AudioSource GameWinSound;
+    public AudioSource MusicaFase;
 
     private bool gameOver = false;
     private bool gameWin = false;
@@ -30,13 +32,13 @@ public class LevelManager : MonoBehaviour
 
     // Start is called before the first frame update
 
-    void Start()
+    public void Start()
     { 
         maxKeysText.text = NumKeysWin.ToString();
     }
 
 
-    void Awake()
+    public void Awake()
     {
         if(levelManager == null)
         {
@@ -49,7 +51,7 @@ public class LevelManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (!gameOver)
         {
@@ -57,18 +59,12 @@ public class LevelManager : MonoBehaviour
             segundosToInt = (int)segundos;
             segundosText.text = segundosToInt.ToString();
         }
-        
-
         if (!gameOver && !gamePause && Input.GetKey(KeyCode.Escape))
         {
             GameStop();
 
         }
-        if (!gameOver && gamePause && Input.GetKey(KeyCode.Escape))
-        {
-            GameContinue();
-
-        }
+        
         if (gameWin)
         {
             GameWin();
@@ -91,11 +87,12 @@ public class LevelManager : MonoBehaviour
     {
         gameOver = true;
         gameOverText.SetActive(true);
-        Time.timeScale = 1f;
     }
     public void GameWin()
     {
-        gameWin= true;
+        MusicaFase.Stop();
+        GameWinSound.Play();
+        gameWin = true;
         gameWinText.SetActive(true);
     }
     public void GameStop()

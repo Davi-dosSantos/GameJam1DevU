@@ -181,14 +181,14 @@ RectTransform:
   m_GameObject: {fileID: 716454418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1449870824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -151, y: 80}
+  m_AnchoredPosition: {x: -164, y: 66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716454420
@@ -239,11 +239,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Apos ouvir alguns rumores de que o Grande\nTesouro Perdido foi avistado
-    por algumas\npessoas, Johan decide sair em busca deste\ntesouro, e acaba tornando
-    essa busca seu maior\nobjetivo de vida. Ap\xF3s um tempo de busca, Johan\nse
-    torna obsessivo por tesouros e suas riquezas,\ne cada vez mais tem sede de encontrar
-    o Grande\nTesouro Perdido..."
+  m_Text: "  Apos ouvir alguns rumores de que o Grande Tesouro Perdido \r\nfora avistado,
+    Johan parte em sua jornada em busca\r\ndas chaves amaldicoadas que, supostamente,
+    escondem esse \r\ntesouro. Sua vida ent\xE3o se transforma em uma busca incessante\r\npor
+    essas chaves e, a cada chave que ele consegue, ele se\r\ntorna mais obcecado
+    em alcancar seu \"sonho\", o Tesouro \r\nPerdido.\r\n  Ajude Johan a coletar
+    essas chaves e realizar seu sonho!!"
 --- !u!222 &716454422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -419,7 +420,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1638397842}
-        m_TargetAssemblyTypeName: IntroGameMiniMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: IntroFacil, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -610,7 +611,7 @@ RectTransform:
   m_GameObject: {fileID: 1449870823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.3, z: 1}
   m_Children:
   - {fileID: 716454419}
   m_Father: {fileID: 1638397841}
@@ -840,7 +841,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1638397842}
-        m_TargetAssemblyTypeName: IntroGameMiniMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: IntroFacil, Assembly-CSharp
         m_MethodName: Voltar
         m_Mode: 1
         m_Arguments:

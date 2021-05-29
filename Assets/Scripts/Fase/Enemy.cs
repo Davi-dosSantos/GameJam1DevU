@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-   private void OnTriggerEnter2D(Collider2D other)
+   public void OnTriggerEnter2D(Collider2D other)
     {
         other.GetComponent<PlayerControl>().Morreu();
     }

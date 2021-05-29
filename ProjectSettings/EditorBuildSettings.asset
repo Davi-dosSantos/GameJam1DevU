@@ -15,15 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Creditos.unity
     guid: b78f70bc2bd4fa644abc03884572f926
   - enabled: 1
+    path: Assets/Scenes/DificulteSelector.unity
+    guid: 375a46a114dd5b2419082cfd891f4fe8
+  - enabled: 1
     path: Assets/Scenes/Introducao.unity
     guid: ee5ed123e64d8364999586ce5ba6aaa0
   - enabled: 1
     path: Assets/Scenes/Comandos.unity
     guid: 0edc3a654a9f1ef43bb635263e57cfda
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 5a22804fe77e3684db97b207a2f90a3c
+  - enabled: 1
+    path: Assets/Scenes/Fontes.unity
+    guid: 67a1a8fd8f66b6f43b6a6157a23b4315
   m_configObjects: {}

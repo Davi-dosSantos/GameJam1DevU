@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2992245944721365906}
   - component: {fileID: -759493721245077879}
   - component: {fileID: -3770419147525672441}
+  - component: {fileID: -3012460545383625678}
   m_Layer: 0
   m_Name: BolaCanhao
   m_TagString: Untagged
@@ -145,3 +146,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3012460545383625678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992245944721365909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609166f888a2e1a46808b37f15a553ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

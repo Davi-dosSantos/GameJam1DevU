@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4877791708347114391}
   - component: {fileID: 4877791708347114390}
-  - component: {fileID: 5155781783246589163}
   - component: {fileID: 5983508247695768015}
   m_Layer: 6
   m_Name: PlataformaBarril
@@ -209,19 +208,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5155781783246589163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4877791708347114388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71128ac984988714d9934510962b6f6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plataformDestructionPoint: {fileID: 0}
 --- !u!61 &5983508247695768015
 BoxCollider2D:
   m_ObjectHideFlags: 0

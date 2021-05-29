@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7714515444502035210}
-  - component: {fileID: 7714515444502035212}
   - component: {fileID: 7714515444502035211}
   m_Layer: 6
   m_Name: PlataformEnemy
@@ -30,24 +29,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1870642480989403259}
-  - {fileID: 6593589803056657169}
   - {fileID: 7233657186251932139}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7714515444502035212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714515444502035209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71128ac984988714d9934510962b6f6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plataformDestructionPoint: {fileID: 0}
 --- !u!61 &7714515444502035211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74,36 +59,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5638418, y: 1.3335757}
   m_EdgeRadius: 0
---- !u!1 &8958234086320367740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6593589803056657169}
-  m_Layer: 6
-  m_Name: ProjetilPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6593589803056657169
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8958234086320367740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.93, y: 2.8099997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7714515444502035210}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2875108818193066910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,7 +68,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4865414673509526133, guid: 5d9a56ce94720584495d648a3b0adf7a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4865414673509526133, guid: 5d9a56ce94720584495d648a3b0adf7a, type: 3}
       propertyPath: m_LocalScale.x
@@ -181,6 +136,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7714515444502035210}
     m_Modifications:
+    - target: {fileID: 4317347168132288862, guid: 0c48e3d0aeddee54d981a6aa9a64f2ce, type: 3}
+      propertyPath: firepoint
+      value: 
+      objectReference: {fileID: 8471076712404145206}
     - target: {fileID: 8285125233779058776, guid: 0c48e3d0aeddee54d981a6aa9a64f2ce, type: 3}
       propertyPath: m_Size.x
       value: 0.18792185
@@ -262,5 +221,10 @@ PrefabInstance:
 --- !u!4 &1870642480989403259 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8285125233779058778, guid: 0c48e3d0aeddee54d981a6aa9a64f2ce, type: 3}
+  m_PrefabInstance: {fileID: 7714515442863591457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8471076712404145206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2197819906274657303, guid: 0c48e3d0aeddee54d981a6aa9a64f2ce, type: 3}
   m_PrefabInstance: {fileID: 7714515442863591457}
   m_PrefabAsset: {fileID: 0}

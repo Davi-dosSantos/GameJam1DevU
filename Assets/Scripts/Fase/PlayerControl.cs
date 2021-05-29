@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour {
     public static PlayerControl playerControl;
     public float moveSpeed;
     public float jumpForce;
-    public float speedBase;
+    private float speedBase;
     public Transform groundCheck;
 
     public AudioSource jumpSound;
@@ -24,15 +24,15 @@ public class PlayerControl : MonoBehaviour {
     private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        speedBase = LevelManager.levelManager.speedBase;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         if (estaVivo)
         {
@@ -94,6 +94,7 @@ public class PlayerControl : MonoBehaviour {
             rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
             GetComponent<BoxCollider2D>().enabled = false;
             Invoke("GameOver", 2f);
+
             
         }
     }

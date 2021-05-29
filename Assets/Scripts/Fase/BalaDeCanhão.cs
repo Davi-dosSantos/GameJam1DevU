@@ -13,8 +13,5 @@ public class BalaDeCanhão : MonoBehaviour
         rig.velocity = transform.right * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        other.GetComponent<PlayerControl>().Morreu();
-    }
+    
 }

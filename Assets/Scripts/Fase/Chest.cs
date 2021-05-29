@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            //LevelManager.levelManager.ChestCatch();
+            LevelManager.levelManager.GameWin();
         }
     }
 }
