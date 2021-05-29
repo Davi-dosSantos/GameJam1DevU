@@ -1372,7 +1372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163, y: 40}
+  m_AnchoredPosition: {x: -163, y: 66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431185399
@@ -1423,9 +1423,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\tParabens ! ! !\n  Voce lutou bravamete e conseguiu chegar ao bau,\n
-    porem este nao era o bau que johan buscava.\n  agora Venca a dificuldade intermediaria
-    e descubra \nmais sobre a historia de johan.\n \t"
+  m_Text: "\tParabens ! ! !\n Sao poucos os que chegam aqui, johan com sua \najuda
+    conseguiu mais um bau, porem quando ele o \nabriu percebeu que nao havia nada
+    dentro ... mas \nmais uma parte de johan deixou de existir naquele\nmomento ...
+    \n\t\n \t"
 --- !u!222 &431185401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1884,7 +1885,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1154312055}
-        m_TargetAssemblyTypeName: FinalScrean, Assembly-CSharp
+        m_TargetAssemblyTypeName: PreFinalScrean, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
@@ -1975,7 +1976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keysAtual: 0
-  NumKeysWin: 10
+  NumKeysWin: 8
   speedBase: 7
   gamePause: 0
   KeySound: {fileID: 270902959}
@@ -3911,7 +3912,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1154312050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f64ebd4f8a399848a2184ca1f8512d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e03641337d71e74d9a815bc36e42a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1183940599

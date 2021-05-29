@@ -7,10 +7,10 @@ public class IntroMedio : MonoBehaviour
 {
     public void Continue()
     {
-        SceneManager.LoadScene("Fase-Medio");
+        SceneManager.LoadScene("Fase1-Medio");
     }
     public void Voltar()
     {
-        SceneManager.LoadScene("DificultSelector");
+        SceneManager.LoadScene("DificulteSelector");
     }
 }

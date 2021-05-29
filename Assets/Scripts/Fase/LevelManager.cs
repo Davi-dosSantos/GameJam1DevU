@@ -91,9 +91,9 @@ public class LevelManager : MonoBehaviour
     public void GameWin()
     {
         MusicaFase.Stop();
-        GameWinSound.Play();
         gameWin = true;
         gameWinText.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void GameStop()
     {

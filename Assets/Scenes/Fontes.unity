@@ -1106,7 +1106,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Sound effects from:\r\nhttps://opengameart.org/content/512-sound-effects-8-bit-style\r\nhttps://phoenix1291.itch.io/sound-effects-pack-2\r\nhttps://opengameart.org/content/open-chest\r\nhttps://void1gaming.itch.io/halftone-sound-effects-pack-lite\n\nMusic
-    from:\n https://www.zapsplat.com\r\nhttps://www.facebook.com/crymetothepalemoon/videos/1946830138896842/"
+    from:\n https://www.zapsplat.com\r\nhttps://www.facebook.com/crymetothepalemoon/videos/1946830138896842/\nhttps://opengameart.org/content/dark-ambiance-cries-from-hell"
 --- !u!222 &1927907953
 CanvasRenderer:
   m_ObjectHideFlags: 0

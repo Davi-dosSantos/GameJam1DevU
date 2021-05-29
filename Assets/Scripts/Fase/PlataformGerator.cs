@@ -59,7 +59,7 @@ public class PlataformGerator : MonoBehaviour
                 newPlataform.transform.position = transform.position;
                 newPlataform.transform.rotation = transform.rotation;
                 newPlataform.SetActive(true);
-            if (Random.Range(0, 3) == 1)
+            if (Random.Range(0, 2) == 1)
             {
                 theKeysGenerator.SpawnKeys(new Vector3(transform.position.x, transform.position.y + Random.Range(1, 5)));
             }

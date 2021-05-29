@@ -10,6 +10,7 @@ public class Chest : MonoBehaviour
         {
             gameObject.SetActive(false);
             LevelManager.levelManager.GameWin();
+            LevelManager.levelManager.GameWinSound.Play();
         }
     }
 }

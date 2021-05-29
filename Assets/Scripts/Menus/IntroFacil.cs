@@ -8,10 +8,10 @@ public class IntroFacil : MonoBehaviour
 {
     public void Continue()
     {
-        SceneManager.LoadScene("Fase-Facil");
+        SceneManager.LoadScene("Fase1-Facil");
     }
     public void Voltar()
     {
-        SceneManager.LoadScene("DificultSelector");
+        SceneManager.LoadScene("DificulteSelector");
     }
 }

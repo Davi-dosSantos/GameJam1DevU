@@ -188,7 +188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164, y: 66}
+  m_AnchoredPosition: {x: -188, y: 66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716454420
@@ -240,11 +240,11 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "  Apos ouvir alguns rumores de que o Grande Tesouro Perdido \r\nfora avistado,
-    Johan parte em sua jornada em busca\r\ndas chaves amaldicoadas que, supostamente,
-    escondem esse \r\ntesouro. Sua vida ent\xE3o se transforma em uma busca incessante\r\npor
-    essas chaves e, a cada chave que ele consegue, ele se\r\ntorna mais obcecado
-    em alcancar seu \"sonho\", o Tesouro \r\nPerdido.\r\n  Ajude Johan a coletar
-    essas chaves e realizar seu sonho!!"
+    Johan parte em sua jornada em busca\r das  chaves \namaldicoadas que, supostamente,
+    escondem esse \rtesouro. Sua \nvida ent\xE3o se transforma em uma busca incessante\r
+    por essas \nchaves e, a cada chave que ele consegue, ele se\r torna mais\nobcecado
+    em alcancar seu \"sonho\", o Tesouro \rPerdido.\r\n  Ajude Johan a coletar essas
+    chaves e realizar seu sonho!!"
 --- !u!222 &716454422
 CanvasRenderer:
   m_ObjectHideFlags: 0

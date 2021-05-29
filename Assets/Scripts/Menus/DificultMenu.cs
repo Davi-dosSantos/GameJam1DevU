@@ -11,11 +11,11 @@ public class DificultMenu : MonoBehaviour
     }
     public void Medio()
     {
-        SceneManager.LoadScene("Itroducao2");
+        SceneManager.LoadScene("Introducao2");
     }
     public void Dificil()
     {
-        SceneManager.LoadScene("Itroducao3");
+        SceneManager.LoadScene("Introducao3");
     }
     public void Voltar()
     {

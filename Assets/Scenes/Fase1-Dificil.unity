@@ -1423,9 +1423,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\tParabens ! ! !\n  Voce lutou bravamete e conseguiu chegar ao bau,\nporem
-    este nao era o bau que johan buscava.\n  agora Venca a dificuldade intermediaria
-    e descubra \nmais sobre a historia de johan.\n \t"
+  m_Text: "apos milhares de anos no inferno, sendo controlado\ncomo um boneco, sendo
+    morto por tiros ,comido por \ncarangueijos, johan finalmente podera descansar
+    em\npaz. "
 --- !u!222 &431185401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keysAtual: 0
-  NumKeysWin: 10
+  NumKeysWin: 99
   speedBase: 7
   gamePause: 0
   KeySound: {fileID: 270902959}
@@ -4155,9 +4155,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ebfca49652c5894fa98585d515716eb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e0dc34dd9f7ef8046b15d20a6906d23c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.681
+  m_Volume: 0.624
   m_Pitch: 1
   Loop: 1
   Mute: 0

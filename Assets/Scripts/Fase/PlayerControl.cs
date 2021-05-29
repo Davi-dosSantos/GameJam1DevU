@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour {
 
     private Rigidbody2D rb;
     private bool grounded = true;
-    private float maxSpeed = 150;
+    private float maxSpeed = 50;
     private bool estaVivo = true;
 
     private Animator animator;
